@@ -2,5 +2,5 @@
 @plugin "daisyui";
 
 .card.image-full {
-  filter: brightness(150%);
+  filter: brightness(140%);
 }
