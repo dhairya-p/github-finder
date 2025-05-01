@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 function About() {
   return (
@@ -13,19 +13,21 @@ function About() {
       </p>
       <p className='mb-4 text-2xl font-light'>
         Created by {' '}
-        <strong>
+        <strong className="text-pink-500 font-bold">
           Dhairya Patel
         </strong>
       </p>
-      <p className='text-lg text-gray-400'>
-        Version <span className='text-white'>1.0.0</span>
-      </p>
-      <p className='text-lg text-gray-400'>
+      <Link to='/user/dhairya-p' className='btn btn-lg btn-outline btn-secondary my-2'>
+        Check Out My Profile
+      </Link>
+    
+      <p className='text-md text-gray-400 mt-10'>
         Layout By:
-        <a className='text-white' href='https://twitter.com/hassibmoddasser'>
+        <a className='text-white hover:font-medium' href='https://twitter.com/hassibmoddasser'>
           Hassib Moddasser
         </a>
       </p>
+    
     </>
   )
 }

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-
+.card.image-full {
+  filter: brightness(140%);
+}
