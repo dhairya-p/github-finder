@@ -1,4 +1,3 @@
-import propTypes from 'prop-types'
 import RepoItem from './RepoItem'
 
 function RepoList({repos}) {
@@ -14,10 +13,6 @@ function RepoList({repos}) {
       </div>
     </div>
   )
-}
-
-RepoList.propTypes = {
-  repos: propTypes.array.isRequired,
 }
 
 export default RepoList

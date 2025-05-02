@@ -1,6 +1,5 @@
 import { FaGithub } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import propTypes from 'prop-types'
 
 function NavBar({title='Github Finder'}) {
   return (
@@ -31,9 +30,6 @@ function NavBar({title='Github Finder'}) {
   )
 }
 
-NavBar.propTypes = {
-	title: propTypes.string
-}
 
 export default NavBar
 

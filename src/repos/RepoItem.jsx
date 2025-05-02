@@ -1,5 +1,4 @@
 import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
-import propTypes from 'prop-types'
 
 function RepoItem({repo}) {
   const {
@@ -39,10 +38,6 @@ function RepoItem({repo}) {
       </div>
     </div>
   )
-}
-
-RepoItem.propTypes = {
-  repo: propTypes.object.isRequired,
 }
 
 export default RepoItem
