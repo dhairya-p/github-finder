@@ -4,15 +4,16 @@ import GithubContext from "../context/github/GithubContext"
 import { useParams } from "react-router"
 import { Link } from 'react-router-dom'
 import Spinner from '../components/layout/Spinner'
-
+import RepoList from '../repos/RepoList'
 
 
 function User() {
-  const {getUser, user, loading} = useContext(GithubContext)
+  const {getUser, user, loading, getUserRepos, repos} = useContext(GithubContext)
   const params = useParams()
 
   useEffect(() => {
     getUser(params.login)
+    getUserRepos(params.login)
   }, [])
 
   const {
@@ -32,7 +33,7 @@ function User() {
     hireable,
   } = user
 
-
+  const { } = repos
 
 
 
@@ -93,15 +94,15 @@ function User() {
               <div className='stat'>
                 <div className='stat-title text-md'>Website</div>
                 <div className='text-lg stat-value'>
-                  {/*<a href={websiteUrl} target='_blank' rel='noreferrer'>
-                    {websiteUrl}
-                  </a>*/}
+                  <a href={`https://${blog}`} target='_blank' rel='noreferrer'>
+                    {blog}
+                  </a>
                 </div>
               </div>
             )}
             {twitter_username && (
               <div className='stat'>
-                <div className='stat-title text-md'>Twitter</div>
+                <div className='stat-title text-md'>X.com</div>
                 <div className='text-lg stat-value'>
                   <a
                     href={`https://twitter.com/${twitter_username}`}
@@ -161,7 +162,7 @@ function User() {
         </div>
       </div>
 
-      {/*  <RepoList repos={repos} /> */}
+      <RepoList repos={repos} />
     </div>
   )
 }
